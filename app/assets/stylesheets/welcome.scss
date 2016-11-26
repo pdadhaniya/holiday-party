@@ -12,12 +12,8 @@
   text-shadow: 5px 0 5px #000;
 }
 
-.engagement {
-  background: asset_url("story/engagement-compressor.jpg") no-repeat center center fixed;
-}
-
-.firstdate {
-  background: asset_url("story/bulls-compressor.jpg") no-repeat center center fixed;
+.third {
+  background: asset_url("story/2014-group.png") no-repeat center center fixed;
 }
 
 .homepage {
@@ -29,8 +25,8 @@
   height: 900px;
 }
 
-.met {
-  background: asset_url("story/uiuc-compressor.png") no-repeat center center fixed;
+.fourth {
+  background: asset_url("story/2015-group.png") no-repeat center center fixed;
 }
 
 nav {
@@ -41,8 +37,8 @@ nav .fi-heart {
   color:#DC143C !important;
 }
 
-.official {
-  background: asset_url("story/secondcity-compressor.jpg") no-repeat center center fixed;
+.second {
+  background: asset_url("story/2013-group.png") no-repeat center center fixed;
 }
 
 .our-story .row {
@@ -79,8 +75,8 @@ nav .fi-heart {
   text-shadow: 5px 0 5px #000;
 }
 
-.proposal {
-  background: asset_url("story/proposal-compressor.jpg") no-repeat center center fixed;
+.first {
+  background: asset_url("story/2012-group.png") no-repeat center center fixed;
 }
 
 nav a.current {
@@ -106,12 +102,7 @@ nav a.current {
   background-color: #fff !important;
 }
 
-.wday {
-  background: asset_url("story/wday-compressor.jpg") no-repeat center center fixed;
-  background-position: 0px 300px;
-}
-
-.met, .firstdate, .official, .proposal, .engagement, .wday {
+.fourth, .third, .second, .first, .engagement, .wday {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -133,10 +124,6 @@ nav a.current {
     font-size: 20px;
   }
 
-  .engagement {
-    background-position: -200px 70px;
-  }
-
   .fi-arrow-down {
     font-size: 30px !important;
   }
@@ -146,11 +133,11 @@ nav a.current {
     height: 600px;
   }
 
-  .met {
+  .fourth {
     background-position: -255px;
   }
 
-  .official {
+  .second {
     background-position: -550px;
   }
 
@@ -177,11 +164,7 @@ nav a.current {
     font-size: 50px;
   }
 
-  .proposal {
+  .first {
     background-position: -140px -40px;
-  }
-
-  .wday {
-    background-position: -310px 305px;
   }
 }
