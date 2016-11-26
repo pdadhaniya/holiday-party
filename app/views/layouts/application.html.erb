@@ -7,17 +7,17 @@
     <title><%= content_for?(:title) ? yield(:title) : "Parag & Shreya" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    
+
     <!-- Used for gallery -->
     <%= stylesheet_link_tag "slick.css"%>
-    
+
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'moose.JPG' %>
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Dancing+Script|PT+Sans' rel='stylesheet' type='text/css'>
 
-    <meta property="og:title"  content="Parag & Shreya | We're getting married!" />
+    <meta property="og:title"  content="5th Annual Holiday Party" />
     <meta property="og:image:url"  content="<%=image_url('preview.jpg')%>" />
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="640" />
@@ -31,7 +31,7 @@
         <ul class="title-area">
           <li class="name">
             <h1>
-              <a href="/">P&S&nbsp;<i class="fi-heart"></i>&nbsp;<%=countdown%> Days</a>
+              <i class="fi-trees"></i>&nbsp;<%=countdown%> Days
             </h1>
           </li>
           <li class="toggle-topbar">
@@ -41,12 +41,8 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <li><a href="/#story">Our Story</a></li>
-            <li><a href="/weddingparty">Wedding Party</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/accommodations">Accommodations</a></li>
+            <li><a href="/#story">Home</a></li>
             <li><a href="/rsvp">R.S.V.P.</a></li>
-            <li><a href="/social">#ParagAndShreya</a></li>
             <li><a href="/gallery">Gallery</a></li>
             <li><a href="/contact">Contact Us</a></li>
             <!-- <li class="has-dropdown">
