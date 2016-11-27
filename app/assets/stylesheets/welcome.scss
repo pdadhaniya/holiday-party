@@ -2,31 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#date {
-  position: absolute;
-  top: 40%;
-  left: 340px;
-  color: white;
-  font-size: 25px;
-  font-family: 'Dancing Script', cursive;
-  text-shadow: 5px 0 5px #000;
-}
-
-.third {
-  background: asset_url("story/2014-group.png") no-repeat center center fixed;
-}
 
 .homepage {
-  background: asset_url("mainpages/homepage-2-compressor.jpg") no-repeat center center fixed;
+  background: asset_url("mainpages/christmas-bells.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 900px;
-}
-
-.fourth {
-  background: asset_url("story/2015-group.png") no-repeat center center fixed;
+  background-position: -0px 0px;
 }
 
 nav {
@@ -37,24 +21,28 @@ nav .fi-heart {
   color:#DC143C !important;
 }
 
-.second {
-  background: asset_url("story/2013-group.png") no-repeat center center fixed;
-}
-
 .our-story .row {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  height: 300px;
-  padding-top: 76px;
-  padding-bottom: 76px;
+  height: 200px;
+  padding-top: 44px;
+  // padding-bottom: 76px;
+}
+
+.row.pic {
+  height: 500px;
+}
+
+.first .row {
+  height: 700px;
 }
 
 .our-story h3 {
   font-family: 'Dancing Script', cursive;
-  font-size: 60px;
-  color: #0078a0; // teal blue
-  text-align: left;
+  font-size: 80px;
+  color: #BF1C15; // holiday red
+  text-align: center;
 }
 
 .our-story p {
@@ -66,8 +54,7 @@ nav .fi-heart {
 
 #paragshreya {
   position: absolute;
-  top: 22%;
-  left: 160px;
+  top: 387px;
   color: white;
   text-align: center;
   font-size: 90px;
@@ -75,8 +62,33 @@ nav .fi-heart {
   text-shadow: 5px 0 5px #000;
 }
 
+#date {
+  position: absolute;
+  top: 40%;
+  left: 340px;
+  color: white;
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 5px 0 5px #000;
+}
+
 .first {
   background: asset_url("story/2012-group.png") no-repeat center center fixed;
+  background-position: -0px 0px;
+}
+
+.second {
+  background: asset_url("story/2013-group.png") no-repeat center center fixed;
+  background-position: -0px -250px;
+}
+
+.third {
+  background: asset_url("story/2014-group.png") no-repeat center center fixed;
+}
+
+.fourth {
+  background: asset_url("story/2015-group.png") no-repeat center center fixed;
+  background-position: -0px 0px;
 }
 
 nav a.current {
@@ -133,12 +145,16 @@ nav a.current {
     height: 600px;
   }
 
-  .fourth {
-    background-position: -255px;
+  .first {
+    background-position: -140px -40px;
   }
 
   .second {
     background-position: -550px;
+  }
+
+  .fourth {
+    background-position: -255px;
   }
 
   .our-story .row {
@@ -164,7 +180,5 @@ nav a.current {
     font-size: 50px;
   }
 
-  .first {
-    background-position: -140px -40px;
-  }
+
 }
