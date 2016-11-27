@@ -28,6 +28,10 @@
   font-size: 30px;
 }
 
+.fi-trees {
+  padding-left: 10px;
+}
+
 .footer {
   background-color: #f5f5f5; /*light grey*/
   width: 100%;
