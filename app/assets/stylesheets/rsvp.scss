@@ -38,7 +38,7 @@ ul.rsvp-icon {
 }
 
 .sign-in, .not_found {
-  background-color: #F5F5F5; //light grey
+  background-color: #134E13; //holiday green
 }
 
 .sign-in, .rsvp-form {
@@ -57,7 +57,17 @@ ul.rsvp-icon {
   margin: 0px auto;
 }
 
-.sign-in h1, .rsvp-form h1, .song-requests h2 {
+.sign-in h1 {
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
+.sign-in .row {
+  height: 400px;
+}
+
+.rsvp-form h1, .song-requests h2 {
   font-family: 'Dancing Script', cursive;
   color: #0078a0; /*teal blue*/
   text-align: center;
@@ -66,6 +76,7 @@ ul.rsvp-icon {
 .sign-in p {
   text-align: center;
   margin-bottom: 30px;
+  color: #fff;
 }
 
 // RSVP section

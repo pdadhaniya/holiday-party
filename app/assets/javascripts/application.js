@@ -45,7 +45,7 @@ $(document).ready(function(){
     dots: false,
     centerMode: true,
     focusOnSelect: true
-  }); 
+  });
 
 
 
@@ -102,6 +102,18 @@ $(document).ready(function(){
 
   if (window.location.pathname == "/events/search") {
     $(".down").hide();
+  }
+
+  if (window.location.pathname == "/details") {
+    $(".down").hide();
+  }
+
+  if (window.location.pathname == "/details") {
+    $(".row.top").hide();
+  }
+
+  if (window.location.pathname == "/rsvp") {
+    $(".row.top").hide();
   }
 
 });

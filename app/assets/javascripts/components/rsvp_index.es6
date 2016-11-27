@@ -28,7 +28,6 @@ const RsvpIndex = React.createClass({
             </form>
           </div>
         </div>
-        <div className="rsvp"></div>
       </div>
     )
   }
