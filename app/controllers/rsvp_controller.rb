@@ -8,41 +8,27 @@ class RsvpController < ApplicationController
   end
 
   def show
-    name = params.fetch('name').downcase
-    zip  = params.fetch('zip')
-
-    guest = Guest.where(full_name: name, zip: zip)
+    first_name = params.fetch('first').downcase
+    last_name  = params.fetch('last').downcase
+    guest = Guest.where(first_name: first_name, last_name: last_name)
 
     @no_guest = false
 
     if guest.empty?
       @no_guest = true
       render "index"
-    elsif guest.count > 1
-      # TODO show table of options for multiple guests
     else
       session[:guest_id] = guest.first.id
       guests = get_guests_for_family(guest)
-      @events_hash = make_events_hash
       @guest_data = hydrate_guest_data(guests)
       @current_guest = current_user
-      @family_message = @current_guest.family.message
     end
   end
 
   def update
-    message = params.fetch('message')
-    email = params.fetch('email')
-
-    if email != ("" || nil)
-      current_user.update!(email: email)
-    end
-
     rsvp_hash = params.clone
     rsvp_hash.delete('controller') && 
     rsvp_hash.delete('action') && 
-    rsvp_hash.delete('message') && 
-    rsvp_hash.delete('email')
 
     rsvps_to_update = rsvp_hash.keys
 
@@ -61,33 +47,18 @@ class RsvpController < ApplicationController
       rsvp.status = rsvp_hash[rsvp_id]
       rsvp.save!
     end
-
-    if current_user.email? && current_user.email != ""
-      RsvpMailer.send_confirmation_email(current_user).deliver_now
-    end
-
-    RsvpMailer.send_alert_email(current_user).deliver_now    
   end
 
   private
 
-  def make_events_hash
-    events = Event.all
-    events_hash = {}
-    events.map { |event| events_hash[event.id] = event }
-    return events_hash
-  end
-
   def hydrate_guest_data(guests)
     guests.map do |guest|
-      rsvps = Rsvp.where(guest_id: guest.id).order(:event_id)
       {
         "id" => guest.id,
-        "full_name" => guest.full_name,
+        "full_name" => "#{guest.first_name.capitalize} #{guest.last_name.capitalize}",
         "first_name" => guest.first_name,
         "last_name" => guest.last_name,
-        "email" => guest.email,
-        "rsvps" => rsvps
+        "rsvp" => guest.rsvp
       }
     end
   end
