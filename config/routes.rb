@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get '/welcome' => 'welcome#index'
 
+  get '/details' => 'details#index'
+
   root 'welcome#index'
 
 end
