@@ -3,13 +3,13 @@ const DetailsIndex = React.createClass({
     return (
       <div>
         <a id="tothetop"></a>
-        <div className="mehndi">
+        <div className="sign-in details">
           <div className="layer"></div>
           <div className="row">
             <a id="to-next-div"></a>
             <div className="event-text">
-              <h3>5th Annual Holiday Party</h3>
-              <h5>Friday, December 23rd, 2016 at 5:00 PM</h5>
+              <h1>5th Annual Holiday Party</h1>
+              <p>Friday, December 23rd, 2016 at 5:00 PM</p>
               <p>Museum Park Lofts</p>
               <p>1303 S Michigan Ave</p>
               <p>Apt # 1212</p>
