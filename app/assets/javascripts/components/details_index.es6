@@ -9,7 +9,7 @@ const DetailsIndex = React.createClass({
             <a id="to-next-div"></a>
             <div className="event-text">
               <h1>5th Annual Holiday Party</h1>
-              <p>Friday, December 23rd, 2016 at 5:00 PM</p>
+              <h4>Friday, December 23rd, 2016 at 5:00 PM</h4>
               <p>Museum Park Lofts</p>
               <p>1303 S Michigan Ave</p>
               <p>Apt # 1212</p>
