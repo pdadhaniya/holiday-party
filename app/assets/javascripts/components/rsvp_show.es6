@@ -35,6 +35,26 @@ const RsvpShow = React.createClass({
     return rsvp
   },
 
+  renderFamilyMessage() {
+    let familyMessage= this.props.message
+    return (
+      <div className="row fam">
+        <label className="message"><b>Comment(s):</b></label>
+        <textarea name="message">{familyMessage}</textarea>
+      </div>
+    )
+  },
+
+    renderEmail() {
+    let currentUser = this.props.user
+    return (
+      <div className="row ema">
+        <label className="email"><b>Enter e-mail address for confirmation</b></label>
+        <input type="text" name="email" placeholder={currentUser.email}/>
+      </div>
+    )
+  },
+
   render() {
     return (
       <div className="rsvp-form">
@@ -42,11 +62,14 @@ const RsvpShow = React.createClass({
         <div className="row">
         <h1>R.S.V.P.</h1>
         <div className="rsvp-greeting">
-          <h5>Hello, we're so excited to celebrate with you!</h5>
-          <h5>Kindly respond by May 22, 2016.</h5>
+          <h5>Hello, we&#39;re so excited for the 5th Annual Holiday Party!</h5>
+          <h5>Kindly respond by December 15th, 2016.</h5>
+          <p> - Monika & Parag </p>
         </div>
         <form className="rsvp-form-section" action="/rsvp/update" method="post">
           {this.renderGuestData()}
+          {this.renderFamilyMessage()}
+          {this.renderEmail()}
           <div className="center-button">
             <input type="submit" value="Submit" className="button tiny"/>
           </div>

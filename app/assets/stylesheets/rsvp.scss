@@ -80,6 +80,21 @@ ul.rsvp-icon {
 }
 
 // RSVP section
+
+.rsvp-form {
+  background: asset_url("mainpages/snowflakes.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.rsvp-form .row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .rsvp-form .fi-info {
   font-size: 20px;
   color: #008CBA; //bright teal
@@ -97,6 +112,11 @@ ul.rsvp-icon {
   padding: 20px;
 }
 
+.fam, .ema {
+  padding: 20px;
+  padding-left: 36px;
+}
+
 .rsvp-form {
   margin: 0px auto;
 }
@@ -111,18 +131,24 @@ ul.rsvp-icon {
   text-align: center;
 }
 
-.rsvp-greeting h5 {
+p {
+  text-align: center !important;
+}
+
+.rsvp-greeting h5, p {
   font-family: 'PT Sans', sans-serif;
+  color: black;
 }
 
 .rsvp-form label {
   padding-bottom: 20px;
   font-size: 16px;
+  color: black;
 }
 
 .rsvp-form label.name {
   padding-top: 30px;
-  color: #0078a0; /*teal blue*/
+  color: black; /*teal blue*/
 }
 
 .rsvp-form-section {
@@ -135,6 +161,7 @@ ul.rsvp-icon {
 
 .rsvp-form textarea {
   height: 100px;
+  width: 500px;
 }
 
 .rsvp-form input[name="email"] {
