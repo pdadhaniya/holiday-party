@@ -9,40 +9,21 @@ const RsvpShow = React.createClass({
               <label className="name"><b>{guest.full_name}</b></label>
             </div>
             <div className="medium-10 small-2 columns mobile-select">
-              {this.renderRsvps(guest.rsvp)}
+              <div key={guest.id}>
+                <div className="medium-2 small-2 column">
+                  <select name={guest.id} ref='rsvpForm' defaultValue={guest.rsvp}>
+                    <option value="--">--</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       )
     })
     return rsvpRows
-  },
-
-  renderRsvps(rsvps) {
-    let rsvp = _.map(rsvps, (rsvp) => {
-      return (
-        <div key={rsvp.id}>
-          <div className="medium-2 small-2 column">
-            <select name={rsvp.id} ref='rsvpForm' defaultValue={rsvp.status}>
-              <option value="--">--</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
-        </div>
-      )
-    })
-    return rsvp
-  },
-
-  renderFamilyMessage() {
-    let familyMessage= this.props.message
-    return (
-      <div className="row fam">
-        <label className="message"><b>Comment(s):</b></label>
-        <textarea name="message">{familyMessage}</textarea>
-      </div>
-    )
   },
 
   render() {
@@ -58,7 +39,6 @@ const RsvpShow = React.createClass({
         </div>
         <form className="rsvp-form-section" action="/rsvp/update" method="post">
           {this.renderGuestData()}
-          {this.renderFamilyMessage()}
           <div className="center-button">
             <input type="submit" value="Submit" className="button tiny"/>
           </div>

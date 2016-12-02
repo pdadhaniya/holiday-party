@@ -27,25 +27,15 @@ class RsvpController < ApplicationController
 
   def update
     rsvp_hash = params.clone
-    rsvp_hash.delete('controller') && 
-    rsvp_hash.delete('action') && 
+    rsvp_hash.delete('controller')
+    rsvp_hash.delete('action')
 
     rsvps_to_update = rsvp_hash.keys
 
-    guest_rsvp_id = rsvps_to_update.first
-    one_rsvp = Rsvp.find(guest_rsvp_id)
-    family_id = Guest.find(one_rsvp.guest_id).family_id
-    family = Family.find(family_id)
-
-    if message != ("" || nil)
-      family.message = message
-      family.save!
-    end
-
-    rsvps_to_update.each do |rsvp_id|
-      rsvp = Rsvp.find(rsvp_id)
-      rsvp.status = rsvp_hash[rsvp_id]
-      rsvp.save!
+    rsvps_to_update.each do |guest_id|
+      guest = Guest.find(guest_id)
+      guest.rsvp = rsvp_hash[guest_id]
+      guest.save!
     end
   end
 
