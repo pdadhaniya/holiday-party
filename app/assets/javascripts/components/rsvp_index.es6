@@ -3,7 +3,7 @@ const RsvpIndex = React.createClass({
     let guestNotFound = this.props.no_guest ? (
       <div className="not_found">
         <h5>Name not found.</h5>
-        <h5>Please try again or contact Shreya and Parag.</h5>
+        <h5>Please try again or contact Monika or Parag.</h5>
       </div>
     ) : (
       null

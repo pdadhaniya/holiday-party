@@ -1,6 +1,6 @@
 #### README
 
-Wedding website for Parag and Shreya
+Holiday Party Website
 
 ## To Run Locally
 

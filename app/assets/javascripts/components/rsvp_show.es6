@@ -35,6 +35,10 @@ const RsvpShow = React.createClass({
         <div className="rsvp-greeting">
           <h5>Hello, we&#39;re so excited for the 5th Annual Holiday Party!</h5>
           <h5>Kindly respond by December 15th, 2016.</h5>
+          <br/>
+          <br />
+          <h5>If you are attending, please send Parag between $35-$50</h5>
+          <h6>Venmo: parag-dadhaniya</h6>
           <p> - Monika & Parag </p>
         </div>
         <form className="rsvp-form-section" action="/rsvp/update" method="post">
