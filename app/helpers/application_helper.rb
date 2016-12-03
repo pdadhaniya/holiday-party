@@ -1,9 +1,7 @@
 module ApplicationHelper
 
   def countdown
-    wedding_day = Date.parse("23/12/2016")
-    today = Date.today
-    return (wedding_day - today).to_i
+    ((Time.new(2016,12,23,6) - Time.now)/60/60/24).to_f.ceil
   end
 
   def current_user
