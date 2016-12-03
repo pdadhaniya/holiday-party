@@ -150,29 +150,23 @@ p {
 }
 
 .rsvp-form label {
-  padding-bottom: 20px;
   font-size: 16px;
   color: black;
 }
 
 .rsvp-form label.name {
-  padding-top: 30px;
-  color: black; /*teal blue*/
-  padding-right: 50px;
+  color: black;
 }
 
 .rsvp-form select {
   width: 60px;
-  margin-top: 40px;
 }
+
+.rsvp-form .guest {}
 
 .rsvp-form textarea {
   height: 100px;
   width: 500px;
-}
-
-.rsvp-form input[name="email"] {
-  width: 400px;
 }
 
 .rsvp-form input[value="Submit"] {
@@ -181,6 +175,10 @@ p {
 
 .center-button {
   text-align: center;
+}
+
+.guest {
+  // text-align: center !important;
 }
 
 // RSVP Thank You
