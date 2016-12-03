@@ -37,8 +37,8 @@ const RsvpShow = React.createClass({
           <h5>Kindly respond by December 15th, 2016.</h5>
           <br/>
           <br />
-          <h5>If you are attending, please send Parag between $35-$50</h5>
-          <h6>Venmo: parag-dadhaniya</h6>
+          <h5>If you are attending, please send Parag between $35-$50.</h5>
+          <h5><b>Venmo:</b> parag-dadhaniya</h5>
           <p> - Monika & Parag </p>
         </div>
         <form className="rsvp-form-section" action="/rsvp/update" method="post">
