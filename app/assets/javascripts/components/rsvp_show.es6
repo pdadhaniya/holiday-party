@@ -5,12 +5,12 @@ const RsvpShow = React.createClass({
       return (
         <div ref='everything' key={guest.id}>
           <div className="row guest">
-            <div className="medium-2 small-12 columns">
+            <div className="medium-6 small-6 columns">
               <label className="name"><b>{guest.full_name}</b></label>
             </div>
-            <div className="medium-10 small-2 columns mobile-select">
+            <div className="medium-6 small-6 columns mobile-select">
               <div key={guest.id}>
-                <div className="medium-2 small-2 column">
+                <div className="medium-6 small-6 column">
                   <select name={guest.id} ref='rsvpForm' defaultValue={guest.rsvp}>
                     <option value="--">--</option>
                     <option value="Yes">Yes</option>
