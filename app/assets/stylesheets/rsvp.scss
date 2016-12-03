@@ -166,6 +166,7 @@ p {
 
 .rsvp-form select {
   width: 60px;
+  margin-top: 40px;
 }
 
 .rsvp-form textarea {
@@ -175,6 +176,10 @@ p {
 
 .rsvp-form input[name="email"] {
   width: 400px;
+}
+
+.rsvp-form input[value="Submit"] {
+  margin-top: 20px;
 }
 
 .center-button {
@@ -196,16 +201,16 @@ p {
 .rsvp-thank-you h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 70px;
-  color: #0078a0; /*teal blue*/
+  color: #bf1c15 !important;
 }
 
 .rsvp-thank-you h5 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif !important;
   color: black;
 }
 
 .update {
-  background: asset_url("story/2015-group.png") no-repeat center center fixed;
+  background: asset_url("mainpages/christmas-bells") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
